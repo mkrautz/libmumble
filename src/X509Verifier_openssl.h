@@ -15,14 +15,12 @@
 
 namespace mumble {
 
+class X509PEMVerifier;
+
 class X509VerifierPrivate {
 public:
 	X509VerifierPrivate();
-	void ReadSystemCAs();
-	bool VerifyChain(std::vector<X509Certificate> chain, const X509VerifierOptions &opts);
-	static void InitializeSystemVerifier();
-
-	X509_STORE *store_;
+	X509PEMVerifier pem_verifier_;
 };
 
 }
