@@ -34,7 +34,7 @@ X509Verifier::~X509Verifier() {
 }
 
 bool X509Verifier::VerifyChain(std::vector<X509Certificate> chain, const X509VerifierOptions &opts) {
-	return dptr_->pem_verifier_.VerifyCain(chain, opts);
+	return dptr_->pem_verifier_.VerifyChain(chain, opts);
 }
 
 X509VerifierPrivate::X509VerifierPrivate() {
@@ -43,4 +43,6 @@ X509VerifierPrivate::X509VerifierPrivate() {
 #else
 # error libmumble does not have a list of CA paths to search
 #endif
+}
+
 }

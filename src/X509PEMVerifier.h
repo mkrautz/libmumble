@@ -6,7 +6,7 @@
 #define MUMBLE_X509_PEM_VERIFIER_H_
 
 #include <mumble/X509Verifier.h>
-#include <mumble/ByteArray.H>
+#include <mumble/ByteArray.h>
 
 #include <openssl/x509.h>
 #include <openssl/x509v3.h>
