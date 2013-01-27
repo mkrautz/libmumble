@@ -127,8 +127,6 @@ void TLSConnectionPrivate::ShutdownRemote() {
 }
 
 void TLSConnectionPrivate::Write(const ByteArray &buf) {
-	std::cerr << "Write!" << std::endl;
-
 	// If called from within the runloop's thread, allow the operation
 	// to go through immediately.
 	unsigned long us = uv_thread_self();
